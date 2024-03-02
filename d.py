@@ -1,5 +1,12 @@
 # d.py
 
+# The following program demonstrates DIP or 'Dependency Inversion Principle'
+# This principle is stated that high-level mand low-level modules should depend on abstractions rather than each other.
+# Class LoggerInterface abstracts the concept of logging.
+# ConsoleLogger and FileLogger classes are implementations of the LoggerInterface.
+# In other words, they provide a specific implemntation of the log method that prints and writes message to console and file respectively.
+# ConsoleLogger and FileLogger aren't dependent on specific logging, but instead on the abstraction which is provided by Class LoggerInterface.
+
 class LoggerInterface:
     def log(self, message: str):
         raise NotImplementedError
